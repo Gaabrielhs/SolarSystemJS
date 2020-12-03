@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="index.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solar System JS</title>
+    <script src="index.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            overflow-y: hidden;
+        }
+
+        input {
+            height: 20px;
+        }
+
+        .container {
+            margin-top: 10px;            
+        }
+
+        #canvas {
+            margin-top: 10px;
+            image-rendering: pixelated;
+            image-rendering: crisp-edges;
+            image-rendering: -moz-crisp-edges;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
-        <canvas id="canvas" width="1000" height="700"></canvas>
+        <label for="fps">Fps</label>
+        <input type="text" id="fps">
+
+        <label for="speed">Speed</label>
+        <input type="text" id="speed">
+
+        <label for="fitToScreenToggle">Fit to screen</label>
+        <input type="checkbox" id="fitToScreenToggle">
+
+        <label for="proportionalSizes">Proportional sizes</label>
+        <input type="checkbox" id="proportionalSizes">
+        <canvas id="canvas"></canvas>
     </div>
-
-
-    <style>
-        .container {
-            margin: 0 auto;
-            width: 1000px;
-        }
-    </style>
 </body>
 </html>
